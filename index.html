@@ -75,6 +75,9 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
         .btn:hover {
             background: #333;
@@ -91,7 +94,7 @@
             font-weight: 500;
         }
         
-        /* Секция каталога */
+        /* Каталог */
         .catalog {
             padding: 80px 50px;
         }
@@ -183,6 +186,53 @@
             font-size: 14px;
         }
 
+        /* Секция с формой заявки */
+        .contact-section {
+            padding: 80px 50px;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+        }
+        .contact-box {
+            background: #f9f9f9;
+            border: 1px solid #eaeaea;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .contact-box h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .contact-box p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus {
+            border-color: #111;
+        }
+        .contact-box .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
         /* Футер */
         footer {
             text-align: center;
@@ -210,14 +260,14 @@
         <div class="hero-content">
             <h1>Надежные входные и межкомнатные двери для вашего дома</h1>
             <p>Широкий ассортимент, бесплатный замер, профессиональный монтаж с гарантией под ключ.</p>
-            <a href="#" class="btn">Выбрать дверь</a>
+            <a href="#catalog" class="btn">Выбрать дверь</a>
         </div>
         <div class="hero-image">
             [ Фото главного баннера ]
         </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <h2 class="section-title">Популярные модели</h2>
         <div class="products-grid">
             <div class="product-card">
@@ -226,7 +276,7 @@
                     <h3>Престиж Стандарт</h3>
                     <p>Входная дверь с усиленной шумоизоляцией и надежными замками.</p>
                     <div class="price">12 500 грн</div>
-                    <a href="#" class="card-btn">Заказать замер</a>
+                    <a href="#contact" class="card-btn">Заказать замер</a>
                 </div>
             </div>
             <div class="product-card">
@@ -235,7 +285,7 @@
                     <h3>Модерн Экошпон</h3>
                     <p>Стильная межкомнатная дверь в минималистичном дизайне.</p>
                     <div class="price">4 800 грн</div>
-                    <a href="#" class="card-btn">Заказать замер</a>
+                    <a href="#contact" class="card-btn">Заказать замер</a>
                 </div>
             </div>
             <div class="product-card">
@@ -244,7 +294,7 @@
                     <h3>Форпост Лофт</h3>
                     <p>Современная входная дверь с влагостойким покрытием.</p>
                     <div class="price">15 200 грн</div>
-                    <a href="#" class="card-btn">Заказать замер</a>
+                    <a href="#contact" class="card-btn">Заказать замер</a>
                 </div>
             </div>
         </div>
@@ -262,6 +312,22 @@
         <div class="feature-item">
             <h4>🛡️ Гарантия качества</h4>
             <p>Работаем только с проверенными производителями и надежной фурнитурой.</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-box">
+            <h3>Бесплатный вызов замерщика</h3>
+            <p>Оставьте свой номер телефона, и наш специалист свяжется с вами в течение 10 минут для согласования времени.</p>
+            <form onsubmit="event.preventDefault(); alert('Спасибо! Ваша заявка отправлена. Мы скоро свяжемся с вами.');">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Номер телефона (+38...)" required>
+                </div>
+                <button type="submit" class="btn">Вызвать мастера</button>
+            </form>
         </div>
     </section>
 
