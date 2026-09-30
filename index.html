@@ -90,6 +90,107 @@
             color: #777;
             font-weight: 500;
         }
+        
+        /* Секция каталога */
+        .catalog {
+            padding: 80px 50px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #111;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .product-img {
+            height: 220px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 15px;
+        }
+        .card-btn {
+            display: block;
+            text-align: center;
+            background: #f4f4f4;
+            color: #111;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .card-btn:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        /* Преимущества */
+        .features {
+            background: #f9f9f9;
+            padding: 70px 50px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .feature-item {
+            max-width: 300px;
+        }
+        .feature-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .feature-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #eaeaea;
+            color: #777;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -112,9 +213,61 @@
             <a href="#" class="btn">Выбрать дверь</a>
         </div>
         <div class="hero-image">
-            [ Фото двери / Слайдер ]
+            [ Фото главного баннера ]
         </div>
     </section>
+
+    <section class="catalog">
+        <h2 class="section-title">Популярные модели</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">[ Входная дверь ]</div>
+                <div class="product-info">
+                    <h3>Престиж Стандарт</h3>
+                    <p>Входная дверь с усиленной шумоизоляцией и надежными замками.</p>
+                    <div class="price">12 500 грн</div>
+                    <a href="#" class="card-btn">Заказать замер</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">[ Межкомнатная дверь ]</div>
+                <div class="product-info">
+                    <h3>Модерн Экошпон</h3>
+                    <p>Стильная межкомнатная дверь в минималистичном дизайне.</p>
+                    <div class="price">4 800 грн</div>
+                    <a href="#" class="card-btn">Заказать замер</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">[ Входная дверь ]</div>
+                <div class="product-info">
+                    <h3>Форпост Лофт</h3>
+                    <p>Современная входная дверь с влагостойким покрытием.</p>
+                    <div class="price">15 200 грн</div>
+                    <a href="#" class="card-btn">Заказать замер</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">
+            <h4>📐 Бесплатный замер</h4>
+            <p>Мастер приедет в удобное время с каталогами и образцами материалов.</p>
+        </div>
+        <div class="feature-item">
+            <h4>🛠️ Профессиональный монтаж</h4>
+            <p>Установка дверей под ключ за 2 часа с гарантией на работы 12 месяцев.</p>
+        </div>
+        <div class="feature-item">
+            <h4>🛡️ Гарантия качества</h4>
+            <p>Работаем только с проверенными производителями и надежной фурнитурой.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ДвериКом. Все права защищены.</p>
+    </footer>
 
 </body>
 </html>
